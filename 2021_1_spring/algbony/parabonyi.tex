@@ -7,7 +7,7 @@
 % Beamer styling setup
 \usetheme{AnnArbor}
 \usecolortheme{beaver}
-\setbeamercolor{titlelike}{parent=structure,bg=lightgray}
+\setbeamercolor{titlelike}{parent=structure,bg=gray!15}
 %
 
 % Spacing setup
@@ -206,6 +206,18 @@ nagyon gyorsan meg lehet találni, a másodikat sokkal lassabban.
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Valós példák}
+Nagyon sok NP-beli probléma előjön a való életben és nagyon jó lenne őket megoldani.
+
+A gyakorlatban sokszor nem általános megoldásokat kell adni, általában vannak korlátok...
+
+\begin{itemize}
+\item Facebook gráf: Fokszám kicsi.
+\item ...?
+\end{itemize}
+
+\end{frame}
 
 \section{Bar Fight Prevention problem}
 
@@ -229,7 +241,7 @@ engedni az embereket, hogy legfeljebb k darab embert utasítunk el, úgy hogy be
 
 
 \begin{frame}
-
+\frametitle{Példa: a szürkéket kell kidobni}
 \begin{center}
 \begin{tikzpicture}[scale=2]
 \draw[thick, fill=lightgray] (1,1) ellipse (0.4 and 0.2) node {Bob};
@@ -257,4 +269,61 @@ engedni az embereket, hogy legfeljebb k darab embert utasítunk el, úgy hogy be
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Brute force megoldás}
+\begin{itemize}
+\item Brute force algoritmus.
+\item Minden lehetséges részhalmazt megnézzük: ha őket dobnánk ki a többiek verekednének-e?
+\item $2^n$, pl n=1000-re már túl nagy.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ha tudjuk, hogy a k kicsi, pl. $k\leq{}10$}
+\begin{itemize}
+\item A menedzsment úgysem fog nagy k-t engedni.
+\item Aki 0 fokszámú azt beengedhetem, mert senkivel nem fog összeveszni.
+\item Aki k-nál nagyobb fokszámú azt nem engedhetem be, mert akkor a szomszédjait kellene kitiltani, akik k-nál többen vannak.
+\item Ha valakit kitiltok akkor k-t csökkentem eggyel.
+\item Maradék gráf: 1...k fokú csúcsok. Minden kitiltás így k vagy kevesebb konfliktust fog megoldani a továbbiakban.
+\item Ha több mint $k^2$ élünk van akkor biztosan nem megoldható a feladat, készen vagyunk.
+\item Ha $k^2$ vagy kevesebb élünk van, akkor legfeljebb $2k^2$ csúcsunk lehet (minden élnek két vége van és nincs 0 fokú csúcs).
+\item ${2k^2 \choose k}$ mostmár $k\leq{}10$-re már jobb mint az előbbi $2^n$.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{1 fokú csúcsok}
+\begin{itemize}
+\item Az 1 fokú csúcs és szomszédja esetében: ha beengedem a csúcsot akkor az 1 darab szomszédját nem engedhetem be.
+\item Ezzel biztos nem lett rosszabb a helyzet, mert ha a csúcsot nem engedem be akkor a szomszédját beengedhetem, de annak még lehetnek egyéb szomszédjai is.
+\item Ezért engedjük be az 1 fokú csúcsokat és tiltsuk ki a szomszédokat (ezzel k-t is csökkentsük 1-el).
+\item Így mostmár 2..k konfliktus lehet.
+\item Erre megint kiszámolom a max csúcsszámot, ez mostmár csak $k^2$, erre még jobb szám jön ki.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{?}
+Itt van még a példának folytatása bounded search tree-kkel, de azt inkább Milánnak kellene elmondania.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Kernelizációs technika általánosan}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Vertex cover feladat megoldása egyben}
+\end{frame}
+
+\begin{frame}
+\frametitle{Paraméteres komplexitás definíciója általánosan}
+\end{frame}
+
+\begin{frame}
+\frametitle{Szemezgetés}
+\end{frame}
 \end{document}
