@@ -14,6 +14,7 @@
 \setlength{\parindent}{0pt} % No paragraph indenting
 \setlength{\parskip}{5pt} % Set spacing between paragraphs
 \frenchspacing
+\newcommand{\mkspace}{\vspace{19pt}}
 \newcommand{\rmspace}{\vspace{-19pt}}
 %
 
@@ -36,7 +37,9 @@ A P azoknak a nyelveknek az osztálya, amelyekhez van polinom időkorlátos
 algoritmus (determinisztikus Turing-gép), azaz ha létezik olyan p(n) polinom, hogy
 az algoritmus \textbf{az n méretű bemeneteken legfeljebb p(n)} lépést tesz.
 
-Kérdés: Miért csak a bemenet hosszára figyelünk? 
+Szeretnénk minden problémára polinom időkorlátos algoritmusokat adni...
+
+Kérdés: Miért csak a bemenet hosszára figyelünk?
 
 \end{frame}
 
@@ -182,16 +185,24 @@ tudunk adni.
 \end{footnotesize}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[t]
 \frametitle{Példa: Prímtényezős felbontás}
+
+Feladat: számok prímtényezős felbontását megadni.
+
+\mkspace
 \begin{columns}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.487\textwidth}
 $4503599627370496 = 2^{52}$
 \end{column}
-\begin{column}{0.5\textwidth}
+\begin{column}{0.487\textwidth}
 $1125897758834689 = 524287 \cdot 2147483647$
 \end{column}
 \end{columns}
+\mkspace
+
+Ugyanolyan sok számjegyből állnak a számok, tehát ugyanolyan hosszú az input méretünk, mégis az elsőt
+nagyon gyorsan meg lehet találni, a másodikat sokkal lassabban.
 
 \end{frame}
 
