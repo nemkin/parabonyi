@@ -8,6 +8,12 @@
 \usetheme{AnnArbor}
 \usecolortheme{beaver}
 \setbeamercolor{titlelike}{parent=structure,bg=gray!15}
+\setbeamertemplate{navigation symbols}{}
+%
+
+% Beamer notes setup
+\usepackage{pgfpages}
+\setbeameroption{show notes on second screen=right}
 %
 
 % Spacing setup
@@ -16,9 +22,8 @@
 \frenchspacing
 \newcommand{\mkspace}{\vspace{19pt}}
 \newcommand{\rmspace}{\vspace{-19pt}}
+\newcommand{\emptyline}{\vspace{\baselineskip}}
 %
-\usepackage{pgfpages}
-\setbeameroption{show notes on second screen=right}
 
 \begin{document}
 \title{Paraméteres bonyolultság}
@@ -49,6 +54,8 @@
 \input{02_bar_fight_prevention_problem/10_2_k_foku_graf}
 \input{02_bar_fight_prevention_problem/11_bounded_search_tree}
 
+\section{Definíciók}
+
 \begin{frame}
 \frametitle{?}
 Itt van még a példának folytatása bounded search tree-kkel, de azt inkább Milánnak kellene elmondania.
@@ -66,6 +73,8 @@ Itt van még a példának folytatása bounded search tree-kkel, de azt inkább M
 \begin{frame}
 \frametitle{Paraméteres komplexitás definíciója általánosan}
 \end{frame}
+
+\section{Feedback arc set}
 
 \begin{frame}
 \frametitle{Szemezgetés}

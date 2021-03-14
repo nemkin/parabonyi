@@ -1,29 +1,50 @@
 \begin{frame}
-\frametitle{Példa: a szürkéket kell kidobni}
+\frametitle{Példa}
+
 \begin{center}
 \begin{tikzpicture}[scale=2]
-\draw[thick, fill=lightgray] (1,1) ellipse (0.4 and 0.2) node {Bob};
-\draw[thick, fill=lightgray] (3,1) ellipse (0.4 and 0.2) node {Daniel};
-\draw[thick] (5,1) ellipse (0.4 and 0.2) node {Gerhard};
-\draw[thick] (4,2) ellipse (0.4 and 0.2) node {Erik};
-\draw[thick] (1,3) ellipse (0.4 and 0.2) node {Alice};
-\draw[thick] (3,3) ellipse (0.4 and 0.2) node {Christos};
-\draw[thick, fill=lightgray] (5,3) ellipse (0.4 and 0.2) node {Fedor};
+\coordinate (A) at (1,2);
+\coordinate (B) at (1,1);
+\coordinate (C) at (3,2);
+\coordinate (D) at (3,1);
+\coordinate (E) at (4,1.5);
+\coordinate (F) at (5,2);
+\coordinate (G) at (5,1);
 
-\draw[thick] (1.4,1) -- (2.6,1);
-\draw[thick] (3.4,1) -- (4.6,1);
-\draw[thick] (3.4,3) -- (4.6,3);
+\draw[thick] (B) -- (D);
+\draw[thick] (D) -- (G);
+\draw[thick] (C) -- (F);
 
-\draw[thick] (1,1.2) -- (1,2.8);
-\draw[thick] (3,1.2) -- (3,2.8);
-\draw[thick] (5,1.2) -- (5,2.8);
+\draw[thick] (B) -- (A);
+\draw[thick] (D) -- (C);
+\draw[thick] (G) -- (F);
 
-\draw[thick] (1.17,1.18) -- (2.83,2.82);
-\draw[thick] (3.17,1.18) -- (3.83,1.82);
-\draw[thick] (4.17,2.18) -- (4.83,2.82);
+\draw[thick] (B) -- (C);
+\draw[thick] (D) -- (E);
+\draw[thick] (E) -- (F);
 
+\draw[thick, fill=white] (A) ellipse (0.4 and 0.2) node {Alice};
+\draw[thick, fill=white] (B) ellipse (0.4 and 0.2) node {Bob};
+\draw[thick, fill=white] (C) ellipse (0.4 and 0.2) node {Christos};
+\draw[thick, fill=white] (D) ellipse (0.4 and 0.2) node {Daniel};
+\draw[thick, fill=white] (E) ellipse (0.4 and 0.2) node {Erik};
+\draw[thick, fill=white] (F) ellipse (0.4 and 0.2) node {Fedor};
+\draw[thick, fill=white] (G) ellipse (0.4 and 0.2) node {Gerhard};
 \end{tikzpicture}
 \end{center}
 
+\begin{footnotesize}
+\begin{itemize}
+\item Csúcsok = vendégek, élek = verekedni fognak.
+\item Kitilható vendégek száma: k=3.
+\end{itemize}
+Kérdések:
+\begin{itemize}
+\item Kit tiltsunk ki, hogy ne legyen verekedés? \\
+\emptyline
+\item Melyik Algoritmuselméletből tanult feladat ez? \\
+\emptyline
+\end{itemize}
+\end{footnotesize}
 \end{frame}
 
