@@ -1,27 +1,20 @@
 \begin{frame}[t]
 \frametitle{Példa: Prímtényezős felbontás}
 
-Feladat: számok prímtényezős felbontását megadni.
+Feladat: prímtényezős felbontás megadása.
+\emptyline
 
-\mkspace
-\begin{columns}
-\begin{column}{0.487\textwidth}
-$4503599627370496 = 2^{52}$
-\end{column}
-\begin{column}{0.487\textwidth}
-$1125897758834689 = 524287 \cdot 2147483647$
-\end{column}
-\end{columns}
-\mkspace
-
+Kézzel melyiket lenne könnyebb megoldani?
 \begin{itemize}
-\item Input mérete: 16 számjegy.
-\item Kézzel melyiket fogjuk tudni hamarabb megadni?
-\item Számítógép: sokkal több számjegyre hasonlóan (pl. csak 10-nél kisebb prímek vannak benne $\leftrightarrow$ RSA kódolás).
+\item $4503599627370496 = 2^{52}$
+\item $1125897758834689 = 524287 \cdot 2147483647$
 \end{itemize}
 
-\note{Ugyanolyan sok számjegyből állnak a számok, tehát ugyanolyan hosszú az input méretünk, mégis az elsőt
-nagyon gyorsan meg lehet találni, a másodikat sokkal lassabban.}
+Számítógépnek melyiket lenne könnyebb megoldani?
+\begin{itemize}
+\item 10000-nél kisebb prímszámok szorzata.
+\item RSA kódolás feltörése: két nagyon nagy prím szorzatát felbontani.
+\end{itemize}
 
 \end{frame}
 
