@@ -14,7 +14,6 @@ def generate_graph(n, o_x, o_y, density):
     c = to_char(i)
     x = o_x + math.cos(angle)
     y = o_y + math.sin(angle)
-    print(i,angle,x,y)
     lines += [f'\coordinate ({c}) at ({x:.5f},{y:.5f});']
 
   edges = rand(n, n, density=density)
