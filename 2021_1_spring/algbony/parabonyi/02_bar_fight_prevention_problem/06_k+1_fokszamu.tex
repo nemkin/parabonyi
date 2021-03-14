@@ -1,0 +1,11 @@
+\begin{frame}
+\frametitle{k+1}
+\begin{itemize}
+\item Aki k-nál nagyobb fokszámú azt nem engedhetem be, mert akkor a szomszédjait kellene kitiltani, akik k-nál többen vannak.
+\item Ha valakit kitiltok akkor k-t csökkentem eggyel.
+\item Maradék gráf: 1...k fokú csúcsok. Minden kitiltás így k vagy kevesebb konfliktust fog megoldani a továbbiakban.
+\item Ha több mint $k^2$ élünk van akkor biztosan nem megoldható a feladat, készen vagyunk.
+\item Ha $k^2$ vagy kevesebb élünk van, akkor legfeljebb $2k^2$ csúcsunk lehet (minden élnek két vége van és nincs 0 fokú csúcs).
+\item ${2k^2 \choose k}$ mostmár $k\leq{}10$-re már jobb mint az előbbi $2^n$.
+\end{itemize}
+\end{frame}
