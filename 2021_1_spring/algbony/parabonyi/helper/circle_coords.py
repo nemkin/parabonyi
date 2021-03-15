@@ -32,12 +32,17 @@ def generate_graph(n, o_x, o_y, density):
 n = 24
 o_x = 1
 o_y = 1
-ritka = generate_graph(n,o_x,o_y,0.02)
-suru = generate_graph(n,o_x,o_y,0.15)
 
-with open('../01_motivacio/ritka_graf.tex', 'w') as f:
-  f.writelines(ritka)
+kor = generate_graph(11,2,1,1)
+with open('kor.tex', 'w') as f:
+  f.writelines(kor)
 
-with open('../01_motivacio/suru_graf.tex', 'w') as f:
-  f.writelines(suru)
+# ritka = generate_graph(n,o_x,o_y,0.02)
+# suru = generate_graph(n,o_x,o_y,0.15)
+# 
+# with open('../01_motivacio/ritka_graf.tex', 'w') as f:
+#   f.writelines(ritka)
+# 
+# with open('../01_motivacio/suru_graf.tex', 'w') as f:
+#   f.writelines(suru)
 

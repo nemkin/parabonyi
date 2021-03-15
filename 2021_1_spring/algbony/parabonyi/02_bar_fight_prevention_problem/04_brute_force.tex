@@ -1,14 +1,33 @@
 \begin{frame}
 \frametitle{Brute force megoldás}
 
+\begin{footnotesize}
 \begin{itemize}
-\item Csúcsok száma: n
+\item Csúcsok száma: $n$ (pl. $1000$)
+\item Kizárható emberek száma: $k$ (pl. $10$)
 \end{itemize}
+\end{footnotesize}
 
-\begin{itemize}
-\item Minden lehetséges vendég-részhalmaz:
-\item $2^n$ eset
-\item Ha őket zárnánk ki a többiek között marad-e él?
-\end{itemize}
+\begin{footnotesize}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\begin{tabular}{ l | l | l }
+Módszer & Lépések száma & Másodpercben ($10^8$ IPS) \\
+\hline
+\hline
+Minden részhalmaz &
+$2^n = 2^{1000} \approx 1.07\cdot10^{301}$ &
+$1.07\cdot10^{293}$ $\rightarrow$ Univerzum életkora: $6.62\cdot10^{14}$ mp\\
+\hline
+Csak k elemű részhalmazok &
+${{n}\choose{k}} = {{1000}\choose{10}} \approx 2.63\cdot10^{23}$ &
+$2.63\cdot10^{15}$ $\rightarrow$ Nap hossza: $8.64\cdot10^{4}$ mp\\
+\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1}
+\end{footnotesize}
+
+Üzleti korlát: a menedzsment nem fog nagy $k$-t engedélyezni.
+
 \end{frame}
 
