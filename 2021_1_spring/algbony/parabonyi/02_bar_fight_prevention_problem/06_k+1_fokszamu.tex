@@ -4,15 +4,18 @@
 \begin{footnotesize}
 \begin{itemize}
 \item Csúcsok száma: $n$ (pl. $1000$)
-\item Kizárható emberek száma: $k$ (pl. $10$)
-\item Csúcsok fokszáma: $1\leq{}d(v)\leq{}k$
+\item Élek száma: $e$
+\item Még kizárható vendégek száma: $k'\leq{}k$ (pl. $10$)
+\item Csúcsok fokszáma: $1\leq{}d(v)\leq{}k'$
 \end{itemize}
 \end{footnotesize}
 
 \begin{itemize}
-\item Maradék gráf: 1...k fokú csúcsok. Minden kitiltás így k vagy kevesebb konfliktust fog megoldani a továbbiakban.
-\item Ha több mint $k^2$ élünk van akkor biztosan nem megoldható a feladat, készen vagyunk.
-\item Ha $k^2$ vagy kevesebb élünk van, akkor legfeljebb $2k^2$ csúcsunk lehet (minden élnek két vége van és nincs 0 fokú csúcs).
+\item Minden kitiltás $\leq{}k'$ konfliktust fog megoldani.\pause
+\item Még $k'$ kitiltásunk maradt.\pause
+\item Összesen $\leq{}k'^2$ konfliktust tudunk megoldani.\pause
+\item $k'^2<e$ élre: nem megoldható, kész.\pause
+\item $e\leq{}k'^2$ élre: csúcsok száma$\leq{}2k'^2$.\pause
 \item ${2k^2 \choose k}$ mostmár $k\leq{}10$-re már jobb mint az előbbi $2^n$.
 \end{itemize}
 \end{frame}
