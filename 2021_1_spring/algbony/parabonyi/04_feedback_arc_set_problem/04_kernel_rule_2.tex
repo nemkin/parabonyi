@@ -1,0 +1,40 @@
+\begin{frame}
+\frametitle{Kernelizáció: 2. szabály}
+
+Ha egy csúcs nincs benne egyetlen háromszögben sem, akkor töröljük.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\coordinate (V) at (0,1);
+\coordinate (X) at (2,0);
+\coordinate (Xl) at (1.6,0);
+\coordinate (Xlc) at (1.8,0);
+\coordinate (Xr) at (2.4,0);
+\coordinate (Xrc) at (2.2,0);
+\coordinate (Y) at (2,2);
+\coordinate (Yl) at (1.6,2);
+\coordinate (Ylc) at (1.8,2);
+\coordinate (Yr) at (2.4,2);
+\coordinate (Yrc) at (2.2,2);
+
+\begin{scope}[thick,decoration={
+    markings,
+    mark=at position 0.5 with {\arrow{>}}}
+    ] 
+    \only<1>{\draw[thick, postaction={decorate}] (V) -- (Xl);}
+    \only<1>{\draw[thick, postaction={decorate}] (V) -- (X);}
+    \only<1>{\draw[thick, postaction={decorate}] (V) -- (Xr);}
+    \only<1>{\draw[thick, postaction={decorate}] (Yl) -- (V);}
+    \only<1>{\draw[thick, postaction={decorate}] (Y) -- (V);}
+    \only<1>{\draw[thick, postaction={decorate}] (Yr) -- (V);}
+    \only<1,2>{\draw[thick, postaction={decorate}] (Ylc) -- (Xlc);}
+    \only<1,2>{\draw[thick, postaction={decorate}] (Y) -- (X);}
+    \only<1,2>{\draw[thick, postaction={decorate}] (Yrc) -- (Xrc);}
+\end{scope}
+\only<1>{\draw[thick, fill=white] (V) circle (0.1) node {v};}
+\draw[thick, fill=white] (X) circle (0.5) node {X};
+\draw[thick, fill=white] (Y) circle (0.5) node {Y};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}

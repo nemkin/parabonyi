@@ -1,0 +1,38 @@
+\begin{frame}
+\frametitle{Kernelizáció: 1. szabály}
+
+Ha egy él k+1 háromszögben is benne van, akkor fordítsuk meg.
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+\coordinate (A) at (2.00000,1.00000);
+\coordinate (B) at (1.50000,1.86603);
+\coordinate (C) at (0.50000,1.86603);
+\coordinate (D) at (0.00000,1.00000);
+\coordinate (E) at (0.50000,0.13397);
+\coordinate (F) at (1.50000,0.13397);
+
+\begin{scope}[thick,decoration={
+    markings,
+    mark=at position 0.8 with {\arrow{>}}}
+    ] 
+    \draw[thick, postaction={decorate}] (A) -- (E);
+    \draw[thick, postaction={decorate}] (B) -- (E);
+    \draw[thick, postaction={decorate}] (C) -- (E);
+    \draw[thick, postaction={decorate}] (D) -- (E);
+    \draw[thick, postaction={decorate}] (F) -- (A);
+    \draw[thick, postaction={decorate}] (F) -- (B);
+    \draw[thick, postaction={decorate}] (F) -- (C);
+    \draw[thick, postaction={decorate}] (F) -- (D);
+    \only<1>{\draw[thick, red,  postaction={decorate}] (E) -- (F);}
+    \only<2>{\draw[thick, blue, postaction={decorate}] (F) -- (E);}
+\end{scope}
+\draw[thick, fill=white] (A) circle (0.1) node {A};
+\draw[thick, fill=white] (B) circle (0.1) node {B};
+\draw[thick, fill=white] (C) circle (0.1) node {C};
+\draw[thick, fill=white] (D) circle (0.1) node {D};
+\draw[thick, fill=white] (E) circle (0.1) node {E};
+\draw[thick, fill=white] (F) circle (0.1) node {F};
+\end{tikzpicture}
+\end{center}
+\end{frame}
