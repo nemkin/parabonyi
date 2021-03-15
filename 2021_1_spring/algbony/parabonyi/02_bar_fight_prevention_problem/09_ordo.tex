@@ -1,0 +1,18 @@
+\begin{frame}
+\frametitle{Lépésszám}
+\begin{footnotesize}
+\begin{itemize}
+\item Input: $n\cdot{}n$-es szomszédossági mátrix, $k$ szám.
+\item Amíg van változás (max $n$-szer):
+\begin{itemize}
+\begin{footnotesize}
+  \item Kiszámolom minden csúcs fokszámát: $n^2$ lépés.
+  \item Elbánok a $0$, $1$, $k+1\leq{}$ fokszámú csúcsokkal: $n$ lépés.
+\end{footnotesize}
+\end{itemize}
+\item Ez összesen $n\cdot{}(n^2+n) \approx n^3$ lépés lehet.
+\item Kernel megoldása ${{k^2}\choose{k}} \leq{} (k^2)^{k} = k^{2k}$
+\end{itemize}
+\end{footnotesize}
+Összesen: $O(k^{2k}\cdot{}n^3)$.
+\end{frame}

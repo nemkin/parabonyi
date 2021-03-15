@@ -2,6 +2,11 @@
 \frametitle{Kernelizáció: 2. szabály}
 
 Ha egy csúcs nincs benne egyetlen háromszögben sem, akkor töröljük.
+\begin{itemize}
+\item \uncover<2->{A v nincs benne egyetlen körben sem.}
+\item \uncover<3->{Az Y $\rightarrow$ v, illetve v $\rightarrow$ X élekre nincs szükség a feedback arc setben.}
+\item \uncover<4->{Az Y $\rightarrow$ X élek nem fognak megfordulni.}
+\end{itemize}
 
 \begin{center}
 \begin{tikzpicture}[scale=1.5]
@@ -21,19 +26,19 @@ Ha egy csúcs nincs benne egyetlen háromszögben sem, akkor töröljük.
     markings,
     mark=at position 0.5 with {\arrow{>}}}
     ] 
-    \only<1>{\draw[thick, postaction={decorate}] (V) -- (Xl);}
-    \only<1>{\draw[thick, postaction={decorate}] (V) -- (X);}
-    \only<1>{\draw[thick, postaction={decorate}] (V) -- (Xr);}
-    \only<1>{\draw[thick, postaction={decorate}] (Yl) -- (V);}
-    \only<1>{\draw[thick, postaction={decorate}] (Y) -- (V);}
-    \only<1>{\draw[thick, postaction={decorate}] (Yr) -- (V);}
-    \only<1,2>{\draw[thick, postaction={decorate}] (Ylc) -- (Xlc);}
-    \only<1,2>{\draw[thick, postaction={decorate}] (Y) -- (X);}
-    \only<1,2>{\draw[thick, postaction={decorate}] (Yrc) -- (Xrc);}
+    \only<-4>{\draw[thick, postaction={decorate}] (V) -- (Xl);}
+    \only<-4>{\draw[thick, postaction={decorate}] (V) -- (X);}
+    \only<-4>{\draw[thick, postaction={decorate}] (V) -- (Xr);}
+    \only<-4>{\draw[thick, postaction={decorate}] (Yl) -- (V);}
+    \only<-4>{\draw[thick, postaction={decorate}] (Y) -- (V);}
+    \only<-4>{\draw[thick, postaction={decorate}] (Yr) -- (V);}
+    \draw[thick, postaction={decorate}] (Ylc) -- (Xlc);
+    \draw[thick, postaction={decorate}] (Y) -- (X);
+    \draw[thick, postaction={decorate}] (Yrc) -- (Xrc);
 \end{scope}
-\only<1>{\draw[thick, fill=white] (V) circle (0.1) node {v};}
+\only<-4>{\draw[thick, fill=white] (V) circle (0.1) node {v};}
 \draw[thick, fill=white] (X) circle (0.5) node {X};
-\draw[thick, fill=white] (Y) circle (0.5) node {Y};
+\only<-5>{\draw[thick, fill=white] (Y) circle (0.5) node {Y};}
 \end{tikzpicture}
 \end{center}
 
