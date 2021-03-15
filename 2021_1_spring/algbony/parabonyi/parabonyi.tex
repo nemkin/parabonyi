@@ -2,6 +2,7 @@
 
 % Dependency setup
 \usepackage{tikz}
+\usetikzlibrary{decorations.markings}
 %
 
 % Beamer styling setup
@@ -30,6 +31,14 @@
 \author{Kovács Milán, Nemkin Viktória}
 \date{2021. március 16.}
 
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Menetrend}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
 \frame{\titlepage}
 
 \frame{\frametitle{Menetrend}\tableofcontents}
@@ -52,24 +61,15 @@
 \input{02_bar_fight_prevention_problem/08_bounded_search_tree}
 
 \section{Definíciók}
-
 \begin{frame}
-\frametitle{Kernelizációs technika általánosan}
-\input{04_feedback_arc_set_problem/tournament_graf}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Vertex cover feladat megoldása egyben}
-\end{frame}
-
-\begin{frame}
-\frametitle{Paraméteres komplexitás definíciója általánosan}
+\frametitle{Etc}
 \end{frame}
 
 \section{Feedback Arc Set problem}
+\input{04_feedback_arc_set_problem/01_tournament_graph}
+\input{04_feedback_arc_set_problem/02_feedback_arc_set}
+\input{04_feedback_arc_set_problem/03_kernel_rule_1}
+\input{04_feedback_arc_set_problem/04_kernel_rule_2}
+\input{04_feedback_arc_set_problem/05_kernel_size}
 
-\begin{frame}
-\frametitle{Szemezgetés}
-\end{frame}
 \end{document}

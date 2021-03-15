@@ -1,4 +1,5 @@
-\usetikzlibrary{decorations.markings}
+\begin{frame}
+\frametitle{Tournament gráf}
 
 \begin{center}
 \begin{tikzpicture}[scale=2]
@@ -13,27 +14,28 @@
     markings,
     mark=at position 0.8 with {\arrow{>}}}
     ] 
-    \draw[thick, red, postaction={decorate}] (B) -- (A);
-    \draw[thick, red, postaction={decorate}] (C) -- (A);
+    \draw[thick, postaction={decorate}] (A) -- (B);
+    \draw[thick, postaction={decorate}] (A) -- (C);
     \draw[thick, postaction={decorate}] (A) -- (D);
     \draw[thick, postaction={decorate}] (A) -- (E);
     \draw[thick, postaction={decorate}] (A) -- (F);
     \draw[thick, postaction={decorate}] (B) -- (C);
     \draw[thick, postaction={decorate}] (B) -- (D);
-    \draw[thick, postaction={decorate}] (B) -- (E);
-    \draw[thick, postaction={decorate}] (B) -- (F);
+    \draw[thick, postaction={decorate}] (E) -- (B);
+    \draw[thick, postaction={decorate}] (F) -- (B);
     \draw[thick, postaction={decorate}] (C) -- (D);
     \draw[thick, postaction={decorate}] (C) -- (E);
     \draw[thick, postaction={decorate}] (C) -- (F);
     \draw[thick, postaction={decorate}] (D) -- (E);
     \draw[thick, postaction={decorate}] (D) -- (F);
-    \draw[thick, red, postaction={decorate}] (F) -- (E);
+    \draw[thick, postaction={decorate}] (E) -- (F);
 \end{scope}
-\draw[thick, fill=green] (A) circle (0.1) node {A};
-\draw[thick, fill=green] (B) circle (0.1) node {B};
-\draw[thick, fill=green] (C) circle (0.1) node {C};
+\draw[thick, fill=white] (A) circle (0.1) node {A};
+\draw[thick, fill=white] (B) circle (0.1) node {B};
+\draw[thick, fill=white] (C) circle (0.1) node {C};
 \draw[thick, fill=white] (D) circle (0.1) node {D};
-\draw[thick, fill=blue!40] (E) circle (0.1) node {E};
-\draw[thick, fill=blue!40] (F) circle (0.1) node {F};
+\draw[thick, fill=white] (E) circle (0.1) node {E};
+\draw[thick, fill=white] (F) circle (0.1) node {F};
 \end{tikzpicture}
 \end{center}
+\end{frame}
