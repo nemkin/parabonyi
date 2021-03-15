@@ -1,6 +1,12 @@
 \begin{frame}
 \frametitle{Feedback arc set}
 
+\begin{itemize}
+\item Olyan élhalmaz, amit ha megfordítok nem lesz kör a gráfban.
+\item Tehát a gráf minden körének legalább az egyik éle benne van.
+\end{itemize}
+
+
 \begin{center}
 \begin{tikzpicture}[scale=2]
 \coordinate (A) at (2.00000,1.00000);
@@ -21,8 +27,10 @@
     \draw[thick, postaction={decorate}] (A) -- (F);
     \draw[thick, postaction={decorate}] (B) -- (C);
     \draw[thick, postaction={decorate}] (B) -- (D);
-    \draw[thick, red, postaction={decorate}] (E) -- (B);
-    \draw[thick, red, postaction={decorate}] (F) -- (B);
+\only<1>{\draw[thick, red, postaction={decorate}] (E) -- (B);}
+\only<2>{\draw[thick, blue, postaction={decorate}] (B) -- (E);}
+\only<1>{\draw[thick, red, postaction={decorate}] (F) -- (B);}
+\only<2>{\draw[thick, blue, postaction={decorate}] (B) -- (F);}
     \draw[thick, postaction={decorate}] (C) -- (D);
     \draw[thick, postaction={decorate}] (C) -- (E);
     \draw[thick, postaction={decorate}] (C) -- (F);
