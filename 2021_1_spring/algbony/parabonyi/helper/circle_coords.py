@@ -33,9 +33,9 @@ n = 24
 o_x = 1
 o_y = 1
 
-kor = generate_graph(11,2,1,1)
-with open('kor.tex', 'w') as f:
-  f.writelines(kor)
+tournament = generate_graph(6,1,1,1)
+with open('../04_feedback_arc_set_problem/tournament_graf.tex', 'w') as f:
+  f.writelines(tournament)
 
 # ritka = generate_graph(n,o_x,o_y,0.02)
 # suru = generate_graph(n,o_x,o_y,0.15)
