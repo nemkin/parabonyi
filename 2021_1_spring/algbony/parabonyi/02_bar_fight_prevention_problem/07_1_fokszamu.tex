@@ -4,10 +4,25 @@
 \begin{columns}
 \begin{column}{0.5\textwidth}
 \begin{footnotesize}
+\begin{itemize}
+\item
+\only<-2>{Csúcsok száma: $n\leq{}2k^2$}
+\only<3->{Csúcsok száma: $n$ $\textcolor{red}{\leq{}k^2}$}
+(pl. $1000$)
+\item Élek száma: $e\leq{}k^2$
+\item Kizárható vendégek száma: $k$ (pl. $10$)
+\item \only<1>{Csúcsok fokszáma: $1\leq{}d(v)\leq{}k$}\only<2->{Csúcsok fokszáma: $\textcolor{red}{2\leq{}}d(v)\leq{}k$}
+\end{itemize}
+\emptyline
 Mit tehetünk a következő csúcsokkal?
 \begin{itemize}
-\item A: $1$ fokszámú csúcs\\
-\item B: A szomszédja\\
+\item A: $1$ fokszámú csúcs \uncover<2->{\textcolor{red}{$\rightarrow$ Beengedjük}}
+\item B: A szomszédja \uncover<2->{\textcolor{red}{$\rightarrow$ Kitiltjuk, k-t csökkentjük}}
+\end{itemize}
+
+\begin{itemize}
+\uncover<4->{\item ${{k^2}\choose{k}}$, pl. ${{100}\choose{10}} \approx 1.73\cdot10^{13}$.\\
+Már a laptopunk is le tudja futtatni!}
 \end{itemize}
 \end{footnotesize}
 \end{column}
@@ -34,9 +49,9 @@ Mit tehetünk a következő csúcsokkal?
 \draw[thick, fill=white] (N4)  circle (0.12) node{4};
 \draw[thick, fill=white] (N5)  circle (0.12) node{5};
 \uncover<1>{\draw[thick, fill=white] (A)   circle (0.12) node {A};}
-\uncover<2>{\draw[thick, fill=green] (A)   circle (0.12) node {A};}
+\uncover<2->{\draw[thick, fill=green] (A)   circle (0.12) node {A};}
 \uncover<1>{\draw[thick, fill=white] (B)   circle (0.12) node {B};}
-\uncover<2>{\draw[thick, fill=red]   (B)   circle (0.12) node {B};}
+\uncover<2->{\draw[thick, fill=red]   (B)   circle (0.12) node {B};}
 \end{tikzpicture}
 \end{center}
 \end{column}
